@@ -1,0 +1,1 @@
+FU CD compliant template
