@@ -1,13 +1,13 @@
 \mode<presentation>
 
-\defbeamertemplate*{headline}{fub}
+\defbeamertemplate*{headline}{cd-fub}
 {
   \leavevmode
   \hbox{%
-  \begin{beamercolorbox}[wd=\paperwidth,ht=1.1cm,dp=0ex]{headline}
+  \begin{beamercolorbox}[wd=\paperwidth,ht=0.9cm,dp=0ex]{headline}
 		\hspace*{\marginparsep}%
-		\vbox to 1.1cm{
-			\vskip0.7cm
+		\vbox to 1.5cm{
+			\vskip 1cm
 			\usebeamerfont{headline}\insertshortinstitute
 			\vfil
 		}
@@ -18,22 +18,24 @@
   }
 }
 
-\defbeamertemplate*{footline}{fub}
+\defbeamertemplate*{footline}{cd-fub}
 {
-	\leavevmode
-	\hbox{%
-		\begin{beamercolorbox}[wd=\paperwidth,ht=2.25ex,dp=1ex]{footline}
-			\usebeamerfont{footline}%
-			\hspace*{\marginparsep}%
-			\insertshorttitle, \insertshortauthor, \insertshortdate
-			\hfill
-			\insertframenumber%
-			\hspace*{\marginparsep}%
-		\end{beamercolorbox}%
-	}
+  \leavevmode
+  \hbox{%
+    \begin{beamercolorbox}[wd=\paperwidth,ht=2.5ex,dp=1ex,leftskip=0pt]{footer}
+      \usebeamerfont{footline}%
+      \raisebox{0.5ex}{\includegraphics[height=3.5ex]{fu-berlin/logos/fu-rgb-green-small.png}}%
+      \hspace{0.5em}
+      \raisebox{1.25ex}{\insertshortauthor{} \,|\, \insertshortinstitute}
+      \hfill
+      \raisebox{1.25ex}{\insertframenumber}%
+      \hspace*{\marginparsep}%
+    \end{beamercolorbox}
+  }
 }
 
 \setbeamertemplate{sidebar right}{}
 
 
 \mode<all>
+

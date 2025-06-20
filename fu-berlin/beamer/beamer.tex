@@ -1,6 +1,5 @@
-\documentclass[aspectratio=169,hyperref={pdfusetitle,pdfencoding=auto}]{beamer}
+\documentclass{beamer}
 
-% Language setup (if needed, via custom config)
 \newif\ifgerman
 \germantrue
 
@@ -14,28 +13,32 @@
   \def\biblatexsorting{en_US}
 \fi
 
-\usepackage{../cd-theme/cd-fub-theme}
+\usepackage{fu-berlin/cd-theme/cd-fub-theme}
 
-\titlegraphic{\FUlogo[1cm]{../logos/fu-rgb-green-boxes.png}}
+\titlegraphic{\includegraphics[width=3cm]{fu-berlin/logos/fu-rgb-green-boxes}}
 \title[Demo]{FU Berlin Corporate Design – Demo}
 \author[Initials]{Your Name}
+\institute{Institute for Computer Science}
 \date{\today}
 
-\AtBeginSection[]
-{
-\begin{frame}
-  \frametitle{Table of Contents}
-  \tableofcontents[currentsection]
-\end{frame}
-}
 
-\pgfdeclareimage[width=3cm]{logo}{./Fub-logo_svg.png}
+\pgfdeclareimage[width=0.15\paperwidth]{logo}{fu-berlin/logos/fu-rgb-green-boxes}
 \logo{\pgfuseimage{logo}}
 
-\title{An example title}
-\subtitle{With a longer subtitle}
-\institute{Institute for Silly Walks}
-\author{Leonard König\and Foo Bar}
+%% Use for normal slides
+\newenvironment{noheaderframe}{
+  \setbeamertemplate{headline}{}
+  \begin{frame}
+}{
+  \end{frame}
+}
+
+\newenvironment{nofooterframe}{
+    \setbeamertemplate{footline}{}
+    \begin{frame}
+}{
+    \end{frame}
+}
 
 \begin{document}
 
@@ -53,38 +56,11 @@
 \section{Introduction}
 
 \begin{frame}{Overview of topic}
-This should give a neat introduction about what were speaking about.
+A basic introduction to our topic.
 \begin{itemize}
-  \item Foo
-  \item Bar \enquote{baz} buzz
-  \item Buzz buss
-  \item La li lo
+  \item Very important bullet point
+  \item another big point
 \end{itemize}
-
-\begin{figure}
-\centering
-\resizebox{!}{.3\textheight}{
-\begin{tikzpicture}[every node/.style={draw,circle}]
-  \node {A beautiful figure};
-\end{tikzpicture}
-}
-\caption{Caption of figure}
-\end{figure}
 \end{frame}
 
-
-\subsection{Current Research}
-
-\begin{frame}{An Example Research Method}
-We now give overviews about current research methods.
-
-\vfill
-Note:
-\begin{enumerate}
-  \item If we need to cite, we can do this~\cite{Author/2025}
-  \item We can keep \enquote{hide} these\nocite{Author/2025}
-  \item They still show up in the bibliography
-\end{enumerate}
-\vfill
-\end{frame}
-
+\end{document}
