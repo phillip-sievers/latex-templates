@@ -1,0 +1,39 @@
+\mode<presentation>
+
+\defbeamertemplate*{headline}{fub}
+{
+  \leavevmode
+  \hbox{%
+  \begin{beamercolorbox}[wd=\paperwidth,ht=1.1cm,dp=0ex]{headline}
+		\hspace*{\marginparsep}%
+		\vbox to 1.1cm{
+			\vskip0.7cm
+			\usebeamerfont{headline}\insertshortinstitute
+			\vfil
+		}
+		\hfill
+		\usebeamertemplate*{logo}
+		\hspace*{\marginparsep}%
+  \end{beamercolorbox}%
+  }
+}
+
+\defbeamertemplate*{footline}{fub}
+{
+	\leavevmode
+	\hbox{%
+		\begin{beamercolorbox}[wd=\paperwidth,ht=2.25ex,dp=1ex]{footline}
+			\usebeamerfont{footline}%
+			\hspace*{\marginparsep}%
+			\insertshorttitle, \insertshortauthor, \insertshortdate
+			\hfill
+			\insertframenumber%
+			\hspace*{\marginparsep}%
+		\end{beamercolorbox}%
+	}
+}
+
+\setbeamertemplate{sidebar right}{}
+
+
+\mode<all>

@@ -1,0 +1,24 @@
+\ProvidesPackage{beamerfontthemefub}
+\mode<presentation>
+
+\usefonttheme{professionalfonts}
+\usepackage{iftex}
+\ifPDFTeX
+    \usepackage[sfdefault]{roboto} % or use lmodern, helvet, etc.
+    \renewcommand{\familydefault}{\sfdefault}
+\else
+  \usepackage{fontspec}
+  \setsansfont{CMU Sans Serif}
+  \setmainfont{CMU Sans Serif}
+  \setmonofont{CMU Typewriter Text}
+  \usepackage{unicode-math}
+  \setmathfont{Latin Modern Math}
+  \setmathfont[range=\mathbb]{TeX Gyre Termes Math}
+\fi
+
+\setbeamerfont{frametitle}{series=\bfseries}
+\setbeamerfont{footline}{series=\bfseries}
+\setbeamerfont{headline}{series=\bfseries}
+\setbeamerfont{alerted text}{series=\bfseries}
+
+\mode<all>

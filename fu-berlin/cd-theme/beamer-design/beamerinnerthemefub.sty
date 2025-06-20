@@ -1,0 +1,23 @@
+\mode<presentation>
+
+\defbeamertemplate*{title page}{fub}[1][]
+{
+	\vfill
+	\begin{columns}
+		\begin{column}{.3\textwidth}
+			\inserttitlegraphic
+		\end{column}\begin{column}{.7\textwidth}
+			\begin{beamercolorbox}{title}
+				\usebeamerfont{title}\inserttitle
+			\end{beamercolorbox}
+			\ifx\insertsubtitle\@empty\else
+			\begin{beamercolorbox}{subtitle}
+			\usebeamerfont{subtitle}\insertsubtitle
+			\end{beamercolorbox}
+		\fi
+		\end{column}
+	\end{columns}
+	\vfill
+}
+
+\mode<all>
